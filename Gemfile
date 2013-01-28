@@ -2,9 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'pg'
+
 gem 'haml-rails'
 gem 'sass'
 gem 'jquery-rails'
+
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
