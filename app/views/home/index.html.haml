@@ -1,65 +1,57 @@
 %section.page
-	%section.main-hero
-		.container_12
-			.hero-message
-				%h1
-					Hired Skilled People in 15 days...even less
-				%p
-					Staffwisely aims to help your business by giving your staff a chance to work on other companies. In case your business goes down or need to reduce the number of employees.
-			.main-signup-section
-				%a.btn.signup-cta 
-					Post a Job. It's free
-				%p
-					This is a sub headline
-	.container_12
-		.page.feature-section.centered
-			%h2
-				Why Hire on Staffwisely?
-		.page.feature-section.clearfix
-			.grid_4.alpha
-				%h3
-					Meet Deadlines
-				.item-desc
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-			.grid_4
-				%h3
-					Get Access to Vast Skills
-				.item-desc
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  %section.main-hero
+    .container_12
+      .hero-message
+        %h1=t 'home.header'
+        %p=t 'home.sub'
 
-			.grid_4.omega	
-				%h3
-					Flexibility
-				.item-desc
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      .main-signup-section
+        %a.btn.signup-cta=t 'home.buttons.post_a_job'
+        %p=t 'home.buttons.post_a_job_sub'
+
+  .container_12
+    .page.feature-section.centered
+      %h2=t 'home.why_hire.header'
+
+    .page.feature-section.clearfix
+      .grid_4.alpha
+        %h3=t 'home.why_hire.reasons.first.header'
+        .item-desc=t 'home.why_hire.reasons.first.text'
+
+      .grid_4
+        %h3=t 'home.why_hire.reasons.second.header'
+        .item-desc=t 'home.why_hire.reasons.second.text'
+
+      .grid_4.omega
+        %h3=t 'home.why_hire.reasons.third.header'
+        .item-desc=t 'home.why_hire.reasons.third.text'
 
 
-		.page.feature-section.centered
-			%h2
-				How Does It Work?
-		.page.feature-section.clearfix.centered{ :style => 'height: 300px' }
-			.item-round.first
-				.tooltip.hide
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-					.caret
-				%span
-					Post a job
-			.item-round.second{ :style => 'margin-left: -20px; margin-right: -10px' }
-				.tooltip.hide
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-					.caret
-				%span
-					Receive Proposals
-			.item-round.third{ :style => 'margin-left: -10px; margin-right: -20px' }
-				.tooltip.hide
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-					.caret
-				%span
-					Sign Agreements
-			.item-round.fourth
-				.tooltip.hide
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-					.caret
-				%span
-					Start your project
+    .page.feature-section.centered
+      %h2=t 'home.how_it_works.header'
+
+    .page.feature-section.clearfix.centered{ :style => 'height: 300px' }
+      .item-round.first
+        .tooltip.hide
+          =t 'home.how_it_works.steps.first.text'
+          .caret
+        %span=t 'home.how_it_works.steps.first.header'
+
+      .item-round.second{ :style => 'margin-left: -20px; margin-right: -10px' }
+        .tooltip.hide
+          =t 'home.how_it_works.steps.second.text'
+          .caret
+        %span=t 'home.how_it_works.steps.second.header'
+
+      .item-round.third{ :style => 'margin-left: -10px; margin-right: -20px' }
+        .tooltip.hide
+          =t 'home.how_it_works.steps.third.text'
+          .caret
+        %span=t 'home.how_it_works.steps.third.header'
+
+      .item-round.fourth
+        .tooltip.hide
+          =t 'home.how_it_works.steps.fourth.text'
+          .caret
+        %span=t 'home.how_it_works.steps.fourth.header'

@@ -3,3 +3,40 @@ en:
     links:
       how: How it works
       login: Login
+
+  home:
+    header: Hire Skilled People in 15 days...even less
+    sub: Staffwisely aims to help your business by giving your staff a chance to work on other companies. In case your business goes down or need to reduce the number of employees.
+
+    buttons:
+      post_a_job: "Post a job. It's free."
+      post_a_job_sub: Sub text!
+
+    why_hire:
+      header: Why Hire on Staffwisely?
+      reasons:
+        first:
+          header: Meet Deadlines
+          text: Lorem ipsum da fuq is this shit
+        second: 
+          header: Get Access to Vast Skills
+          text: As vast as it gets!
+        third:
+          header: Flexibility
+          text: Flexiflexiflexi i dont know what goes here
+
+    how_it_works: 
+      header: How Does It Work?
+      steps:
+        first:
+          header: Post a job
+          text: Wat
+        second:
+          header: Receive Proposals
+          text: Wat
+        third:
+          header: Sign Agreements
+          text: Wat
+        fourth:
+          header: Start your project
+          text: Wat
