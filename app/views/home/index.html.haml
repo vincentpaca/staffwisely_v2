@@ -1,5 +1,4 @@
 %section.page
-
   %section.main-hero
     .container_12
       .hero-message
@@ -11,47 +10,5 @@
         %p=t 'home.buttons.post_a_job_sub'
 
   .container_12
-    .page.feature-section.centered
-      %h2=t 'home.why_hire.header'
-
-    .page.feature-section.clearfix
-      .grid_4.alpha
-        %h3=t 'home.why_hire.reasons.first.header'
-        .item-desc=t 'home.why_hire.reasons.first.text'
-
-      .grid_4
-        %h3=t 'home.why_hire.reasons.second.header'
-        .item-desc=t 'home.why_hire.reasons.second.text'
-
-      .grid_4.omega
-        %h3=t 'home.why_hire.reasons.third.header'
-        .item-desc=t 'home.why_hire.reasons.third.text'
-
-
-    .page.feature-section.centered
-      %h2=t 'home.how_it_works.header'
-
-    .page.feature-section.clearfix.centered{ :style => 'height: 300px' }
-      .item-round.first
-        .tooltip.hide
-          =t 'home.how_it_works.steps.first.text'
-          .caret
-        %span=t 'home.how_it_works.steps.first.header'
-
-      .item-round.second{ :style => 'margin-left: -20px; margin-right: -10px' }
-        .tooltip.hide
-          =t 'home.how_it_works.steps.second.text'
-          .caret
-        %span=t 'home.how_it_works.steps.second.header'
-
-      .item-round.third{ :style => 'margin-left: -10px; margin-right: -20px' }
-        .tooltip.hide
-          =t 'home.how_it_works.steps.third.text'
-          .caret
-        %span=t 'home.how_it_works.steps.third.header'
-
-      .item-round.fourth
-        .tooltip.hide
-          =t 'home.how_it_works.steps.fourth.text'
-          .caret
-        %span=t 'home.how_it_works.steps.fourth.header'
+    = render 'why_hire'
+    = render 'how_it_works'
