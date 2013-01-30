@@ -2,13 +2,13 @@
   %section.centered.container_12
     .head-wrap.fixed.clearfix
       = link_to "", root_url, :class => "logo", :style => "position: relative"
-      
+
 %section
 
 .user-account-single.centered
   %h1 Sign up
   %p 
-    Already a member?  &nbsp; 
+    Already a member?  &nbsp;
     - if controller_name != 'sessions'
       = link_to "Sign in", new_session_path(resource_name), :class => 'btn'
     .page
@@ -24,7 +24,6 @@
           %fieldset
             = f.label :password_confirmation
             = f.password_field :password_confirmation
-          
           %fieldset
             = f.submit "Sign up", :class => "btn full signup-cta"
           %fieldset
