@@ -1,7 +1,8 @@
 body
   font-family: "OpenSansRegular", Arial, Heveltica, sans-serif
-  color: #717171
+  color: #363636
   font-size: 13px
+  line-height: 1.6
   background: image-url("grid.png") fixed
 
 header
@@ -157,6 +158,76 @@ a.logo
   p
     margin-top: 15px
 
+.feature-section
+  text-shadow: 0 1px 0 rgba(255,255,255,1)
+  &.centered
+    text-align: center
+  h2
+    font-size: 50px
+    font-weight: bold
+    letter-spacing: -1px
+  h3
+    font-size: 26px
+  .item-desc
+    margin: 10px 0
+
+.item-round
+  position: relative
+  -webkit-transition: all .1s ease-in-out
+  -moz-transition: all .1s ease-in-out
+  transition: all .1s ease-in-out
+  width: 150px
+  height: 150px
+  padding: 35px
+  display: inline-block
+  border-radius: 50%
+  background: rgba(0,0,0,.3)
+  color: #fff
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2)
+  text-align: center
+  span
+    position: relative
+    top: 65px
+  &:hover
+    width: 160px
+    height: 160px
+  &.first:hover
+    background: #66cc99
+  &.second:hover
+    background: #ff6633
+  &.third:hover
+    background: #ff3366
+  &.fourth:hover
+    background: #6666ff
+
+  .tooltip
+    position: absolute
+    width: 200px
+    background: #323232
+    top: -70px
+    left: 0
+    padding: 10px
+    border-radius: 5px
+    &.hide
+      display: none
+    .caret
+      position: absolute
+      bottom: -10px
+      border-top: 12px solid #323232
+      border-right: 12px solid transparent
+      border-left: 12px solid transparent
+
+.caret
+  display: inline-block
+  width: 0
+  height: 0
+  vertical-align: top
+  border-top: 4px solid black
+  border-right: 4px solid transparent
+  border-left: 4px solid transparent
+  content: ""
+
+
 .right
   float: right
 
@@ -219,6 +290,7 @@ ul.inline-list > li
   border-radius: 5px
   -webkit-transition: all .2s ease-in-out
   -moz-transition: all .2s ease-in-out
+  transition: all .2s ease-in-out
   position: relative
   z-index: 99
   &:hover
