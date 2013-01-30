@@ -62,5 +62,15 @@ module StaffwiselyV2
     config.assets.initialize_on_precompile = false
 
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
+    # Devise layout
+
+    config.to_prepare do
+      Devise::SessionsController.layout "devise"
+      Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application" : "devise" }
+      Devise::ConfirmationsController.layout "devise"
+      Devise::UnlocksController.layout "devise"
+      Devise::PasswordsController.layout "devise"
+    end
   end
 end
