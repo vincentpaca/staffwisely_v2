@@ -13,6 +13,22 @@ en:
     terms: Terms
     privacy: Privacy
 
+  sign_up:
+    header: Sign up
+    member?: Already a member?
+
+    buttons:
+      sign_in: Sign in
+      sign_up: Sign up
+
+  sign_in:
+    header: Login
+    account?: "Don't have an account?"
+
+    buttons:
+      sign_up: Sign up
+      sign_in: Sign in
+
   home:
     header: Hire Skilled People in 15 days...even less
     sub: Staffwisely aims to help your business by giving your staff a chance to work on other companies. In case your business goes down or need to reduce the number of employees.
