@@ -281,10 +281,11 @@ ul.inline-list > li
 .group-staff-list
   padding: 20px 0 20px 20px
 
-.item
+a.item
   background: #fff
   padding: 10px
   display: inline-block
+  text-decoration: none
   margin: 5px
   cursor: pointer
   border-radius: 5px
@@ -327,6 +328,9 @@ ul.inline-list > li
 
 li.contractor-location
   margin-left: -5px
+.contractor-desc
+  font-size: 12px
+  padding: 10px 0
 
 .staff-item
   li.contractor-name
@@ -549,3 +553,39 @@ li.contractor-location
   border-right: 1px solid #ccc
   padding-right: 10px
   margin-right: 5px
+
+.message-excerpt 
+  position: relative
+  .new-marker
+    position: absolute
+    left: -10px
+    top: -5px
+    background: #F36565
+    font-size: 9px
+    color: white
+    text-shadow: none
+    padding: 1px 5px
+    border-radius: 15px
+  .message-sum
+    vertical-align: top
+    font-size: 12px   
+  a
+    display: block
+    padding: 5px
+    background: #fff
+    text-decoration: none
+    margin: 0 0 5px 0
+    border-radius: 3px
+    color: #999
+    strong
+      color: #4d8eb3
+      display: block
+      font-size: 23px
+      font-family: "OpenSansRegular"
+
+    &:hover
+      box-shadow: 0 1px 2px rgba(0,0,0,.2)
+
+.post-date
+  float: right
+  color: #d1d1d1
