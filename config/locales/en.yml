@@ -3,6 +3,7 @@ en:
     links:
       how: How it works
       login: Login
+      logout: Logout
 
   footer:
     copyright: Staffwisely &copy; 2012

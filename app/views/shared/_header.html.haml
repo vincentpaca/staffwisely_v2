@@ -3,5 +3,8 @@
     = link_to "", root_url, :class => "logo"
     .head-wrap-inner
       %ul.inline-list.right
-        %li= link_to t('header.links.how'), ""
-        %li= link_to t('header.links.login'), "/users/sign_in", :class => "btn cta"
+        - if current_user
+          %li= link_to t('header.links.logout'), destroy_user_session_path, :method => :delete
+        - else
+          %li= link_to t('header.links.how'), ""
+          %li= link_to t('header.links.login'), "/users/sign_in", :class => "btn cta"
