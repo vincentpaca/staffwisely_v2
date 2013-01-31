@@ -4,4 +4,5 @@ StaffwiselyV2::Application.routes.draw do
   root :to => 'home#index'
 
   resources :dashboard
+  resources :jobs
 end
