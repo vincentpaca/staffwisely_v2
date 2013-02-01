@@ -1,3 +1,63 @@
+%section.page
+  %section.wrapper.container_12.clearfix
+    .grid_8.alpha
+      %h1 Post a Job
+      .pane-white.clearfix
+        .pane-transparent
+          .profile-form
+            .clearfix.section-group
+              .grid_7.alpha
+                %fieldset
+                  %label Job Title
+                  %input{ :type => "text" } 
+
+            .clearfix.section-group
+              .grid_3.alpha
+                %fieldset
+                  %label Work Arrangement
+                  %select
+                    %option Hourly Project
+                    %option On-site
+                    %option Remote with Occasional meetup
+                    %option Full remote
+              .grid_3.omega
+                %fieldset
+                  %label Experience
+                  %select
+                    %option Senior
+                    %option Middle
+                    %option Junior
+                    %option Newbie
+            .clearfix.section-group
+              .grid_7.alpha
+                %fieldset
+                  %label Project description
+                  %textarea{ :style => "height: 120px" }
+
+            .clearfix.section-group
+              .grid_7.alpha
+                %fieldset
+                  %label Job Requirements
+                  %textarea{ :style => "height: 120px" }
+
+            .clearfix.section-group
+              %p
+                %strong Important:
+                Before initializing a deal, we highly recommend that both parties sign agreements like non-compete, non-solicitation and non-disclosure to protect the interests of both parties. These documents should be provided and arranged by both parties
+
+            %div{ :style => "margin: 20px 0" }
+              %button{ :type => "submit", :class => "btn signup-cta"  }
+                Post this Job
+
+              %button{ :type => "submit", :class => "btn", :style => 'float: right'  }
+                Save as draft
+
+              
+
+
+
+      
+
 = form_for @job, :url => jobs_path do |f|
   = f.label :title
   = f.text_field :title
