@@ -1,1 +1,17 @@
-DASHBOARD
+%section.page
+  %section.wrapper.container_12.clearfix
+    .grid_4.alpha
+      .pane-white.clearfix
+        .user-contractor
+          .user-thumb
+            = image_tag("user-1.png")
+          .user-details
+            %ul
+              %li.contractor-name 
+                EdeyaLabs
+              %li.contractor-location
+                %i.icon-map-marker
+                Makati, Philippines
+      = link_to "Post a project","#", :class => "btn signup-cta full"
+        
+
