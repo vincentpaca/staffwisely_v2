@@ -6,13 +6,14 @@
           = image_tag("user-1.png")
         .user-details.clearfix
           %ul
-            %li.contractor-name
-              EdeyaLabs
+            %li.contractor-name= current_user.company.name
             %li.contractor-location
               %i.icon-map-marker
-              Makati, Philippines
-      .contractor-desc
-        We partner with digital agencies and IT Outsourcing companies worldwide to help them deliver their web projects.
+              - if current_user.company.address.present?
+                = current_user.company.address
+              - else
+                Add your address here
+      .contractor-desc= current_user.company.description
 
   - if request.fullpath == "/dashboard"
     = link_to "Post a project", new_job_path, :class => "btn signup-cta full"
