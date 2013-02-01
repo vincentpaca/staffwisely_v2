@@ -1,7 +1,11 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!, :only => [ :send_proposal ]
   def index
-    @projects = Post.includes(:user, :company).active
+    if current_user
+      @projects = Post.includes(:user, :company).all_except(current_user.company.id)
+    else
+      @projects = Post.includes(:user, :company).active
+    end
 
     respond_to do |format|
       format.html

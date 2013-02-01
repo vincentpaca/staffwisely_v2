@@ -1,18 +1,4 @@
 %section.page
-  .search-wrapper.fixed
-    .container_12.clearfix
-      .grid_12.alpha
-        %label{ :style => 'color: #999' } 
-          %strong Search
-        %input.search-input{ :type => 'text', :placeholder => 'Enter a job position or project' }
-        %select{ :style => 'display: inline-block; width: 200px' }
-          %option
-            Hourly
-          %option
-            Project based
-        %button.btn.cta
-          Search
-
   .page{ :style => 'margin-top: 50px' }
     .container_12
       - @projects.each do |p|
@@ -33,4 +19,4 @@
             .search-item
               %h3
                 =link_to p.title, project_path(p)
-              %p= truncate p.description, :length => 120
+              %p= truncate p.description, :length => 150
