@@ -5,4 +5,5 @@ StaffwiselyV2::Application.routes.draw do
 
   resources :dashboard
   resources :jobs
+  resources :projects
 end
