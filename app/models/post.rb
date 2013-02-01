@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :proposals
 
+  validates_presence_of :title, :description, :requirements
+
   def active
     Post.where(:draft => false)
   end
