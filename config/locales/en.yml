@@ -29,6 +29,26 @@ en:
       sign_up: Sign up
       sign_in: Sign in
 
+  jobs:
+    new:
+      header: Post a Job
+
+      labels:
+        title: Job Title
+        arrangement: Work Arrangement
+        experience: Experience
+        description: Project Description
+        requirements: Job Requirements
+
+      important:
+        header: "Important:"
+        text: Before initializing a deal, we highly recommend that both parties sign agreements like non-compete, non-solicitation and non-disclosure to protect the interests of both parties. These documents should be provided and arranged by both parties
+
+      buttons:
+        post: Post this job
+        draft: Save as draft
+
+
   home:
     header: Hire Skilled People in 15 days...even less
     sub: Staffwisely aims to help your business by giving your staff a chance to work on other companies. In case your business goes down or need to reduce the number of employees.
@@ -43,14 +63,14 @@ en:
         first:
           header: Meet Deadlines
           text: Lorem ipsum da fuq is this shit
-        second: 
+        second:
           header: Get Access to Vast Skills
           text: As vast as it gets!
         third:
           header: Flexibility
           text: Flexiflexiflexi i dont know what goes here
 
-    how_it_works: 
+    how_it_works:
       header: How Does It Work?
       steps:
         first:
