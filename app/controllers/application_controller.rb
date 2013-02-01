@@ -10,4 +10,9 @@ class ApplicationController < ActionController::Base
     Experience.all
   end
   helper_method :experiences
+
+  def currencies
+    Currency.all
+  end
+  helper_method :currencies
 end
