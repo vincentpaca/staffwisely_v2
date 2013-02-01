@@ -24,6 +24,7 @@ class JobsController < DashboardController
   def create
     @job = Post.new(params[:post])
     @job.user = current_user
+    @job.company = current_user.company
 
     respond_to do |format|
       if @job.save
