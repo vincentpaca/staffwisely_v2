@@ -32,6 +32,8 @@ en:
   jobs:
     new:
       header: Post a Job
+      success: Job post successful!
+      fail: There was an error while posting your job.
 
       labels:
         title: Job Title
