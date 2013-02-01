@@ -59,6 +59,15 @@ en:
       buttons:
         submit_proposal: Submit a proposal
 
+  proposals:
+    new:
+      header: Submit a proposal
+
+      labels:
+        hourly_rate: Project-based (Hourly)
+        monthly_rate: Time and Material (Monthly)
+        details: Additional details
+
 
   home:
     header: Hire Skilled People in 15 days...even less
