@@ -10,5 +10,5 @@
           %li= link_to t('header.links.logout'), destroy_user_session_path, :method => :delete, :class => "btn cta"
 
         - else
-          %li= link_to t('header.links.how'), ""
+          %li= link_to t('header.links.how'), "/how_it_works"
           %li= link_to t('header.links.login'), "/users/sign_in", :class => "btn cta"

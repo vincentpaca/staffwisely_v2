@@ -6,7 +6,7 @@ en:
       logout: Logout
 
   footer:
-    copyright: Staffwisely &copy; 2012
+    copyright_html: Staffwisely &copy; 2012
     how_it_works: How it Works
     about: About
     contact: Contact
