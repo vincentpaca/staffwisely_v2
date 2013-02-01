@@ -7,9 +7,7 @@
     .head-wrap-inner
       %ul.inline-list.right
         - if current_user
-          .user-thumb.small
-            = image_tag "user-1.png"
-          %li= link_to t('header.links.logout'), destroy_user_session_path, :method => :delete
+          %li= link_to t('header.links.logout'), destroy_user_session_path, :method => :delete, :class => "btn cta"
 
         - else
           %li= link_to t('header.links.how'), ""
