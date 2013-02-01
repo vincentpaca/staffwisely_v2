@@ -1,6 +1,9 @@
 %section.container_12
   .head-wrap.fixed.clearfix
-    = link_to "", root_url, :class => "logo"
+    - if current_user
+      = link_to "", "/dashboard", :class => "logo"
+    - else
+      = link_to "", root_url, :class => "logo"
     .head-wrap-inner
       %ul.inline-list.right
         - if current_user
