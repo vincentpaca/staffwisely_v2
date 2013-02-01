@@ -4,6 +4,7 @@ en:
       how: How it works
       login: Login
       logout: Logout
+      projects: Browse Projects
 
   footer:
     copyright_html: Staffwisely &copy; 2012
