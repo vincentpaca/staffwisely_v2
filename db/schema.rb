@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130201134348) do
+ActiveRecord::Schema.define(:version => 20130201141640) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20130201134348) do
     t.integer  "experience"
     t.boolean  "draft",               :default => false
     t.integer  "user_id"
+    t.integer  "company_id"
   end
 
   create_table "proposals", :force => true do |t|
