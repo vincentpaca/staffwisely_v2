@@ -1,0 +1,90 @@
+%section.page
+  %section.wrapper.container_12.clearfix
+    = render 'company_info'
+
+    .grid_8.omega
+      .pane-white{ :style => 'padding: 0' }
+        .post-item
+          %h1=t @project.title
+          .project-meta
+            %ul
+              %li
+                %strong=t 'jobs.show.labels.arrangement'
+                = @project.working_arrangement
+              %li
+                %strong=t 'jobs.show.labels.experience'
+                = @project.experience
+          .project-desc
+            %p= @project.description
+
+          .job-requirements
+            %h2=t 'jobs.show.labels.requirements'
+            %p= @project.requirements
+
+
+      .pane-white.submit-proposal{ :style => "display: none" }
+        %h1
+          Submit a proposal
+        .profile-info
+          .user-contractor.clearfix
+            .user-thumb
+              = image_tag "user-1.png"
+            .user-details
+              %ul
+                %li.contractor-name
+                  Web design company
+                %li.contractor-location
+                  %icon.icon-map-marker
+                  Makati, Philippines
+                %li
+                  edcel@webdesign.com
+                %li
+                  Skype: edcel123
+
+
+        .profile-form
+          .clearfix.section-group
+            .grid_7.alpha
+              .section-group
+                %fieldset
+                  %label
+                    Monthly rate
+                  .grid_1.alpha
+                    %fieldset
+                      %input{ :type => "text" }
+                  .grid_2.omega
+                    %select{ :style => "width: 80px" }
+                      %option
+                        USD
+                      %option
+                        SGD
+                      %option
+                        PHP
+
+            %fieldset
+              .section-group
+                %label
+                  Hourly rate
+                .grid_1.alpha
+                  %fieldset
+                    %input{ :type => "text" }
+                .grid_2.omega
+                  %select{ :style => "width: 80px" }
+                    %option
+                      USD
+                    %option
+                      SGD
+                    %option
+                      PHP
+
+            %fieldset
+              .section-group
+                %label
+                  Additional details
+                %textarea.input-details
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat quam quis diam venenatis tristique. Morbi commodo tincidunt sem scelerisque sollicitudin. Sed aliquet, felis quis ultricies malesuada, urna arcu sodales ligula, iaculis lacinia ante erat id tortor. Maecenas eu nulla at lacus mollis porttitor. Curabitur vestibulum mauris id tortor ultricies eu suscipit elit lacinia. Donec sit amet nunc mi, sed sollicitudin dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+
+
+      = link_to "Submit a proposal", "#", :class => "btn signup-cta full", :id => "proposeBtn"
+      /= link_to t("jobs.show.buttons.submit_proposal"), "", :class => "btn signup-cta full"
