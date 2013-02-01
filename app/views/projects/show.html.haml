@@ -10,10 +10,10 @@
             %ul
               %li
                 %strong=t 'jobs.show.labels.arrangement'
-                = @project.working_arrangement
+                = WorkingArrangement.find(@project.working_arrangement).name
               %li
                 %strong=t 'jobs.show.labels.experience'
-                = @project.experience
+                = Experience.find(@project.experience).name
           .project-desc
             %p= @project.description
 
@@ -21,4 +21,8 @@
             %h2=t 'jobs.show.labels.requirements'
             %p= @project.requirements
 
-      = render 'proposal'
+      - if current_user
+        = render 'proposal'
+      - else
+        = link_to "Submit a proposal", send_proposal_project_path(@project), :class => "btn signup-cta full"
+

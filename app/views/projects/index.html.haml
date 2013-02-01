@@ -15,24 +15,22 @@
 
   .page{ :style => 'margin-top: 50px' }
     .container_12
-      .section-group.search-group.clearfix
-        .grid_4.alpha
-          .user-contractor
-            .clearfix
-              .user-thumb
-                = image_tag("user-1.png")
-              .user-details.clearfix
-                %ul
-                  %li.contractor-name
-                    EdeyaLabs
-                  %li.contractor-location
-                    %i.icon-map-marker
-                    Manila, Philippines
-            
-        .grid_8.omega
-          .search-item
-            %h3
-              =link_to 'Looking for Ruby on Rails developer','#'
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat quam quis diam venenatis tristique. Morbi commodo tincidunt sem
-        
+      - @projects.each do |p|
+        .section-group.search-group.clearfix
+          .grid_4.alpha
+            .user-contractor
+              .clearfix
+                .user-thumb
+                  = image_tag("user-1.png")
+                .user-details.clearfix
+                  %ul
+                    %li.contractor-name= p.company.name
+                    - if p.company.address.present?
+                      %li.contractor-location
+                        %i.icon-map-marker
+                        = p.company.address
+          .grid_8.omega
+            .search-item
+              %h3
+                =link_to p.title, project_path(p)
+              %p= truncate p.description, :length => 120

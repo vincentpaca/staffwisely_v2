@@ -12,6 +12,3 @@
                 %i.icon-map-marker
                 = @project.company.address
       .contractor-desc= @project.company.description
-
-  - if request.fullpath == "/dashboard"
-    = link_to "Post a project", new_job_path, :class => "btn signup-cta full"

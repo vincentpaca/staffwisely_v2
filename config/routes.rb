@@ -1,7 +1,11 @@
 StaffwiselyV2::Application.routes.draw do
   resources :dashboard
   resources :jobs
-  resources :projects
+  resources :projects do
+    member do
+      get 'send_proposal'
+    end
+  end
   resources :proposals
 
   get :how_it_works, :controller => :home, :action => :how_it_works
