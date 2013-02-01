@@ -1,34 +1,14 @@
 %section.page
   %section.wrapper.container_12.clearfix
-    .grid_4.alpha
-      .pane-white.clearfix
-        .user-contractor
-          .clearfix
-            .user-thumb
-              = image_tag("user-1.png")
-            .user-details.clearfix
-              %ul
-                %li.contractor-name
-                  EdeyaLabs
-                %li.contractor-location
-                  %i.icon-map-marker
-                  Makati, Philippines
-          .contractor-desc
-            We partner with digital agencies and IT Outsourcing companies worldwide to help them deliver their web projects.
-      = link_to "Post a project", new_job_path, :class => "btn signup-cta full"
+    = render 'company_info'
 
     .grid_8.omega
       .pane-transparent
-        .message-excerpt
-          .new-marker 1 new
-          %a
-            .message-sum
-              .post-date Jan 13, 2012
-              %strong Looking for ROR Developer
-              There are many variations of passages of Lorem Ipsum available, but the...
-        .message-excerpt
-          %a
-            .message-sum
-              .post-date Jan 4, 2012
-              %strong Clicking Labs
-              fsdfsdfs
+
+        - @jobs.each do |job|
+          .message-excerpt
+            = link_to job_path(job) do
+              .message-sum
+                .post-date= job.created_at.strftime("%b %d, %Y")
+                %strong= job.title
+                = truncate job.description, :length => 90

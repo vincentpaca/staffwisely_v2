@@ -1,48 +1,24 @@
 %section.page
   %section.wrapper.container_12.clearfix
-    .grid_4.alpha
-      .pane-white.clearfix
-        .user-contractor
-          .clearfix
-            .user-thumb
-              = image_tag("user-1.png")
-            .user-details.clearfix
-              %ul
-                %li.contractor-name
-                  EdeyaLabs
-                %li.contractor-location
-                  %i.icon-map-marker
-                  Makati, Philippines
-          .contractor-desc
-            We partner with digital agencies and IT Outsourcing companies worldwide to help them deliver their web projects.
-      
+    = render 'dashboard/company_info'
 
     .grid_8.omega
       .pane-white{ :style => 'padding: 0' }
         .post-item
-          %h1
-            Looking for ROR Developer
+          %h1=t @job.title
           .project-meta
             %ul
               %li
-                %strong
-                  Work arrangement:
-                Hourly Project
+                %strong=t 'jobs.show.labels.arrangement'
+                = @job.title
               %li
-                %strong
-                  Experience:
-                Senior
+                %strong=t 'jobs.show.labels.experience'
+                = @job.experience
           .project-desc
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nulla urna, iaculis a hendrerit nec, consequat non dolor. Morbi a fermentum turpis. Vivamus adipiscing, justo at sodales fermentum, elit ante sagittis ligula, at laoreet lorem mauris vel dolor. Phasellus sed orci eu lorem pharetra venenatis. Sed pretium tincidunt est vitae consectetur. Fusce ac mi non ante ultricies lacinia. Donec mattis fringilla dolor, sed bibendum orci bibendum tempor.
-
-            %p
-              Suspendisse ut ipsum mattis lectus condimentum consequat. Vestibulum et accumsan est. Sed non quam sit amet justo tempus tempus pellentesque at sapien. Phasellus tortor nibh, vestibulum a fermentum eget, scelerisque ut magna. Proin rhoncus, dui ac pharetra consequat, nibh turpis euismod nulla, vitae mattis mi ante in eros. Quisque elementum condimentum quam, sed suscipit neque auctor ac. Aenean quis leo metus. Duis semper risus sit amet leo bibendum bibendum. Integer sed orci erat, a sodales neque. Duis vehicula ornare massa id molestie. Cras tempor lacus eget sem molestie convallis.
+            %p= @job.description
 
           .job-requirements
-            %h2
-              Job Requirements
-            %p
-              Suspendisse ut ipsum mattis lectus condimentum consequat. Vestibulum et accumsan est. Sed non quam sit amet justo tempus tempus pellentesque at sapien. Phasellus tortor nibh, vestibulum a fermentum eget, scelerisque ut magna.
+            %h2=t 'jobs.show.labels.requirements'
+            %p= @job.requirements
 
-      = link_to "Submit a proposal", new_job_path, :class => "btn signup-cta full"
+      = link_to t("jobs.show.buttons.submit_proposal"), "", :class => "btn signup-cta full"

@@ -50,6 +50,15 @@ en:
         post: Post this job
         draft: Save as draft
 
+    show:
+      labels:
+        arrangement: "Work Arrangement:"
+        experience: "Experience:"
+        requirements: Job Requirements
+
+      buttons:
+        submit_proposal: Submit a proposal
+
 
   home:
     header: Hire Skilled People in 15 days...even less

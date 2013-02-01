@@ -1,0 +1,18 @@
+.grid_4.alpha
+  .pane-white.clearfix
+    .user-contractor
+      .clearfix
+        .user-thumb
+          = image_tag("user-1.png")
+        .user-details.clearfix
+          %ul
+            %li.contractor-name
+              EdeyaLabs
+            %li.contractor-location
+              %i.icon-map-marker
+              Makati, Philippines
+      .contractor-desc
+        We partner with digital agencies and IT Outsourcing companies worldwide to help them deliver their web projects.
+
+  - if request.fullpath == "/dashboard"
+    = link_to "Post a project", new_job_path, :class => "btn signup-cta full"
