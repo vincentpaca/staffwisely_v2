@@ -6,4 +6,5 @@ StaffwiselyV2::Application.routes.draw do
   resources :dashboard
   resources :jobs
   resources :projects
+  resources :proposals
 end
