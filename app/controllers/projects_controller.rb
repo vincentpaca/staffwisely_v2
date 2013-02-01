@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Job.active
+    @projects = Post.active
   end
 end

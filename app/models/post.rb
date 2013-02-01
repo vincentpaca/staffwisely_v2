@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title, :description, :requirements
 
-  def active
+  def self.active
     Post.where(:draft => false)
   end
 end
