@@ -55,7 +55,10 @@ textarea
   outline: none
   -webkit-transition: all .2s ease-in-out
   -moz-transition: all .2s ease-in-out
-
+  &.input-details
+    font-size: 12px
+    height: 120px
+    font-family: "OpenSansRegular", sans-serif
 input
   &[type=text]:focus, &[type=password]:focus
     border: 1px solid #c1c1c1
@@ -267,9 +270,12 @@ ul.inline-list > li
   padding: 10px
   margin: 20px 0
 
-.post-item 
+.post-item
   h1
     padding: 10px
+    font-family: 'Bree Serif', serif
+.submit-proposal
+  h1
     font-family: 'Bree Serif', serif
 .padfix-1
   padding-right: 20px
@@ -597,13 +603,15 @@ li.contractor-location
   .new-marker
     position: absolute
     left: -10px
-    top: -5px
+    top: 3px
     background: #F36565
     font-size: 9px
     color: white
     text-shadow: none
     padding: 1px 5px
     border-radius: 15px
+    &.draft
+      background: #999
   .message-sum
     vertical-align: top
     font-size: 12px   
@@ -627,3 +635,6 @@ li.contractor-location
 .post-date
   float: right
   color: #d1d1d1
+.profile-info
+  margin: 20px 0 20px 0
+  border-bottom: 1px solid #e1e1e1
