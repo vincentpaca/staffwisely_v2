@@ -65,7 +65,7 @@ StaffwiselyV2::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.assets.precompile += %w( application-all.css application-website.css modernizr.js application-devise.css active_admin.css active_admin.js )
+  config.assets.precompile += %w( application-all.css application-website.css modernizr.js application-devise.css active_admin.css.scss active_admin.js )
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
