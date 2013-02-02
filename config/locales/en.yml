@@ -63,6 +63,8 @@ en:
   proposals:
     new:
       header: Submit a proposal
+      success: Your proposal was sent successfully!
+      fail: Something went wrong while sending your proposal.
 
       labels:
         hourly_rate: Project-based (Hourly)

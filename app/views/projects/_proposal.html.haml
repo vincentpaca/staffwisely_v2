@@ -40,6 +40,8 @@
               = f.label t("proposals.new.labels.details")
               = f.text_area :details, :class => "input-details"
 
+          = f.hidden_field :post_id, :value => @project.id
+
   #submit-proposal.hide
     = f.submit t("jobs.show.buttons.submit_proposal"), :class => "btn signup-cta full"
   #show-proposal
