@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   belongs_to :company
   has_many :proposals
 
-  validates_presence_of :title, :description, :requirements
+  validates_presence_of :title, :description, :requirements, :user, :company
 
   def self.active
     Post.where(:draft => false).order("created_at DESC")
