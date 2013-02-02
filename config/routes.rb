@@ -7,4 +7,6 @@ StaffwiselyV2::Application.routes.draw do
   resources :jobs
   resources :projects
   resources :proposals
+
+  get :how_it_works, :controller => :home, :action => :how_it_works
 end
