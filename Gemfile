@@ -6,6 +6,7 @@ gem 'pg'
 gem 'haml-rails'
 gem 'sass'
 gem 'jquery-rails'
+gem 'sass-rails',   '~> 3.2.3'
 
 gem 'devise'
 gem 'ambry'
@@ -13,7 +14,6 @@ gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
