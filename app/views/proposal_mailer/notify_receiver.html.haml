@@ -1,0 +1,25 @@
+%p
+  Hi there!
+
+%p
+  #{@sender.name} submitted a proposal for this job post: #{@post.title}
+
+%p
+  From: #{@sender.name}(#{@user_sender.email})
+  %br/
+  Below is the proposal:
+  %br/
+  Time and Material (Monthly): #{@proposal.monthly_rate} #{Currency.find(@proposal.monthly_currency).name}
+  %br/
+  Project-based (Hourly): #{@proposal.hourly_rate} #{Currency.find(@proposal.hourly_currency).name}
+  - if @proposal.details.present?
+    %br/
+    Additional Details:
+    %br/
+    = @proposal.details.html_safe
+
+%p
+  Regards,
+  %br/
+  Staffwisely Team
+

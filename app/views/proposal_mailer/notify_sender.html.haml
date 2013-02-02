@@ -1,0 +1,30 @@
+%p
+  Hi there!
+
+%p
+  You have successfully submitted a proposal for this subject:
+
+%p
+  Title: #{@post.title}
+  %br/
+  Posted by: #{@receiver.name}
+  %br/
+  = link_to "View Project", project_url(@post)
+
+%p
+  Below is your proposal:
+  %br/
+  Time and Material (Monthly): #{@proposal.monthly_rate} #{Currency.find(@proposal.monthly_currency).name}
+  %br/
+  Project-based (Hourly): #{@proposal.hourly_rate} #{Currency.find(@proposal.hourly_currency).name}
+  - if @proposal.details.present?
+    %br/
+    Additional Details:
+    %br/
+    = @proposal.details.html_safe
+
+%p
+  Regards,
+  %br/
+  Staffwisely Team
+
