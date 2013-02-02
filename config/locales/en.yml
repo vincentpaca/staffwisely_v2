@@ -6,7 +6,7 @@ en:
       logout: Logout
 
   footer:
-    copyright: Staffwisely &copy; 2012
+    copyright_html: Staffwisely &copy; 2012
     how_it_works: How it Works
     about: About
     contact: Contact
@@ -59,10 +59,19 @@ en:
       buttons:
         submit_proposal: Submit a proposal
 
+  proposals:
+    new:
+      header: Submit a proposal
+
+      labels:
+        hourly_rate: Project-based (Hourly)
+        monthly_rate: Time and Material (Monthly)
+        details: Additional details
+
 
   home:
-    header: Hire Skilled People in 15 days...even less
-    sub: Staffwisely aims to help your business by giving your staff a chance to work on other companies. In case your business goes down or need to reduce the number of employees.
+    header: Hire Skilled People Fast And When You Need Them
+    sub: Get access to iOS developers, Android, Ruby on Rails, Java and more. Post a job, receive proposals, and get them on your team in a matter of days. 
 
     buttons:
       post_a_job: "Post a job. It's free."
@@ -72,27 +81,27 @@ en:
       header: Why Hire on Staffwisely?
       reasons:
         first:
-          header: Meet Deadlines
-          text: Lorem ipsum da fuq is this shit
+          header: Unlimited Supply Of Skills
+          text: From designers to iOS developers, Staffwisely gives you access to a huge network of companies that can provide you with the talent you need -- available on a per-project or time-and-material basis.
         second:
-          header: Get Access to Vast Skills
-          text: As vast as it gets!
+          header: Increase Your Sales
+          text: Never say "No" to a project again just because you don't have the people. When an opportunity comes, you take it! Focus on closing that deal first, Staffwisely will make the hiring a lot easier and faster. 
         third:
-          header: Flexibility
-          text: Flexiflexiflexi i dont know what goes here
+          header: Deliver Projects On Time
+          text: Missing a deadline because you were under-staff is a thing in the past. With Staffwisely, you can grow your team on-demand to meet deadlines. Post a job, negotiate the terms, finalize a deal, and get your guy in a matter of days. 
 
     how_it_works:
       header: How Does It Work?
       steps:
         first:
           header: Post a job
-          text: Wat
+          text: Posting a job is free, fast, and easy. Just specify the skills you need, project description, and job requirements.
         second:
           header: Receive Proposals
-          text: Wat
+          text: Companies will send you their proposals for per-project and time-and-material engagements. Negotiate as necessary.
         third:
           header: Sign Agreements
-          text: Wat
+          text: Both parties should sign non-compete, non-solicitation, and non-disclosure for security.
         fourth:
           header: Start your project
-          text: Wat
+          text: Once the terms are in place, documents signed, and you’ve chosen your guy, get him on board.

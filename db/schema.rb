@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130201141640) do
+ActiveRecord::Schema.define(:version => 20130201162456) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -42,8 +42,10 @@ ActiveRecord::Schema.define(:version => 20130201141640) do
     t.integer  "monthly_rate"
     t.text     "details"
     t.integer  "currency"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "monthly_currency"
+    t.integer  "hourly_currency"
   end
 
   create_table "users", :force => true do |t|

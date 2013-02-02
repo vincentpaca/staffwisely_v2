@@ -7,12 +7,10 @@
         .user-details.clearfix
           %ul
             %li.contractor-name= current_user.company.name
-            %li.contractor-location
-              %i.icon-map-marker
-              - if current_user.company.address.present?
+            - if current_user.company.address.present?
+              %li.contractor-location
+                %i.icon-map-marker
                 = current_user.company.address
-              - else
-                Add your address here
       .contractor-desc= current_user.company.description
 
   - if request.fullpath == "/dashboard"
