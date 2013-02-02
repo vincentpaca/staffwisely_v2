@@ -9,9 +9,17 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :company, :company_attributes
   # attr_accessible :title, :body
 
+  after_create :send_welcome_message
+
   has_many :posts
   has_many :proposals
   belongs_to :company
 
   accepts_nested_attributes_for :company
+
+  private
+
+  def send_welcome_message
+    UserMailer.welcome(self.email).deliver
+  end
 end
