@@ -289,6 +289,7 @@ ul.inline-list > li
 
 .search-item
   font-size: 12px
+  text-shadow: 0 1px 0 #fff
   h3
     font-family: 'Bree Serif', serif
     font-size: 20px
@@ -435,8 +436,13 @@ li.contractor-location
       color: #c1c1c1
 
 .search-project-meta
+  padding: 5px 0
   background: transparent
-  color: #333
+  li
+    color: #333
+    strong
+      @extend li
+
 
 
 
