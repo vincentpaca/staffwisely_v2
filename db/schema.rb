@@ -11,19 +11,39 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130131155200) do
+ActiveRecord::Schema.define(:version => 20130201141640) do
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.text     "requirements"
     t.text     "contact_details"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
     t.integer  "working_arrangement"
     t.integer  "experience"
-    t.boolean  "draft"
+    t.boolean  "draft",               :default => false
     t.integer  "user_id"
+    t.integer  "company_id"
+  end
+
+  create_table "proposals", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.integer  "hourly_rate"
+    t.integer  "monthly_rate"
+    t.text     "details"
+    t.integer  "currency"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -39,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20130131155200) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "company_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -1,25 +1,25 @@
 %section.page
   %section.wrapper.container_12.clearfix
-    = render 'dashboard/company_info'
+    = render 'company_info'
 
     .grid_8.omega
       .pane-white{ :style => 'padding: 0' }
         .post-item
-          %h1=t @job.title
+          %h1=t @project.title
           .project-meta
             %ul
               %li
                 %strong=t 'jobs.show.labels.arrangement'
-                = @job.working_arrangement
+                = @project.working_arrangement
               %li
                 %strong=t 'jobs.show.labels.experience'
-                = @job.experience
+                = @project.experience
           .project-desc
-            %p= @job.description
+            %p= @project.description
 
           .job-requirements
             %h2=t 'jobs.show.labels.requirements'
-            %p= @job.requirements
+            %p= @project.requirements
 
 
       .pane-white.submit-proposal{ :style => "display: none" }
@@ -86,5 +86,5 @@
 
 
 
-      / = link_to "Submit a proposal", "#", :class => "btn signup-cta full", :id => "proposeBtn"
-      / = link_to t("jobs.show.buttons.submit_proposal"), "", :class => "btn signup-cta full"
+      = link_to "Submit a proposal", "#", :class => "btn signup-cta full", :id => "proposeBtn"
+      /= link_to t("jobs.show.buttons.submit_proposal"), "", :class => "btn signup-cta full"

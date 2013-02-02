@@ -1,9 +1,13 @@
 class Post < ActiveRecord::Base
-  attr_accessible :contact_details, :description, :requirements, :title, :working_arrangement, :experience, :user, :draft
+  attr_accessible :contact_details, :description, :requirements, :title, :working_arrangement, :experience, :user, :draft, :company
 
   belongs_to :user
+  belongs_to :company
+  has_many :proposals
 
-  def active
+  validates_presence_of :title, :description, :requirements
+
+  def self.active
     Post.where(:draft => false)
   end
 end

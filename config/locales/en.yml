@@ -32,6 +32,8 @@ en:
   jobs:
     new:
       header: Post a Job
+      success: Job post successful!
+      fail: There was an error while posting your job.
 
       labels:
         title: Job Title
@@ -47,6 +49,15 @@ en:
       buttons:
         post: Post this job
         draft: Save as draft
+
+    show:
+      labels:
+        arrangement: "Work Arrangement:"
+        experience: "Experience:"
+        requirements: Job Requirements
+
+      buttons:
+        submit_proposal: Submit a proposal
 
 
   home:
