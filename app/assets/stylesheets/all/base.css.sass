@@ -28,6 +28,11 @@ input
     outline: none
     -webkit-transition: all .2s ease-in-out
     -moz-transition: all .2s ease-in-out
+  &.search-input
+    width: 500px
+    
+    padding: 7px
+    
 select
   background: #fff
   padding: 7px
@@ -274,9 +279,27 @@ ul.inline-list > li
   margin: 20px 0
 
 .post-item
-  h1
+  h1,h3
     padding: 10px
     font-family: 'Bree Serif', serif
+
+.search-group
+  border-bottom: 1px solid #b1b1b1
+  box-shadow: 0 1px 0 rgba(255,255,255,.6)
+  padding: 10px 0
+
+.search-item
+  font-size: 12px
+  h3
+    font-family: 'Bree Serif', serif
+    font-size: 20px
+    line-height: 1
+    margin-bottom: 5px
+    a
+      color: #f22651
+      text-shadow: 0 1px 0 rgba(255,255,255,.5)
+
+
 .submit-proposal
   h1
     font-family: 'Bree Serif', serif
@@ -683,3 +706,9 @@ li.contractor-location
   border-radius: 50%
   padding: 36px
   text-shadow: 0 1px 0 #fff
+
+.search-wrapper
+  background: #fff
+  padding: 25px 5px 10px 5px
+  &.fixed
+    width: 100%
