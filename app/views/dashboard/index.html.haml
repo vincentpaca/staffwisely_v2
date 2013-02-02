@@ -3,7 +3,7 @@
     = render 'company_info'
 
     .grid_8.omega
-      .pane-transparent
+      .pane-transparent{ :style => 'padding: 0' }
 
         - @jobs.each do |job|
           .message-excerpt
