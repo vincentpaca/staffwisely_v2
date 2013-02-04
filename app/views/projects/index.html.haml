@@ -19,4 +19,4 @@
             .search-item
               %h3
                 =link_to p.title, project_path(p)
-              %p= truncate p.description, :length => 150
+              %p= truncate_html strip_tags(p.description), :length => 150
