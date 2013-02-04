@@ -27,13 +27,13 @@
                 .grid_7.alpha
                   %fieldset
                     = f.label t("jobs.new.labels.description")
-                    = f.text_area :description, :style => "height: 120px"
+                    = f.cktext_area :description, :style => "height: 120px"
 
               .clearfix.section-group
                 .grid_7.alpha
                   %fieldset
                     = f.label t("jobs.new.labels.requirements")
-                    = f.text_area :requirements, :style => "height: 120px"
+                    = f.cktext_area :requirements, :style => "height: 120px"
 
               .clearfix.section-group
                 %p

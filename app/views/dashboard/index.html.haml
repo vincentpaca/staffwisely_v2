@@ -11,4 +11,4 @@
               .message-sum
                 .post-date= job.created_at.strftime("%b %d, %Y")
                 %strong= job.title
-                = truncate job.description, :length => 90
+                = truncate_html strip_tags(job.description), :length => 90

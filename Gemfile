@@ -7,6 +7,8 @@ gem 'haml-rails'
 gem 'sass'
 gem 'jquery-rails'
 gem 'sass-rails',   '~> 3.2.3'
+gem 'ckeditor'
+gem 'truncate_html'
 
 gem 'devise'
 gem 'ambry'
