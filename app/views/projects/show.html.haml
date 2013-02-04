@@ -15,11 +15,11 @@
                 %strong=t 'jobs.show.labels.experience'
                 = Experience.find(@project.experience).name
           .project-desc
-            %p= @project.description
+            %p= @project.description.html_safe
 
           .job-requirements
             %h2=t 'jobs.show.labels.requirements'
-            %p= @project.requirements
+            %p= @project.requirements.html_safe
 
       - if current_user
         = render 'proposal'

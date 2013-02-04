@@ -38,7 +38,7 @@
           .section-group
             %fieldset
               = f.label t("proposals.new.labels.details")
-              = f.text_area :details, :class => "input-details"
+              = f.cktext_area :details, :class => "input-details"
 
           = f.hidden_field :post_id, :value => @project.id
 
