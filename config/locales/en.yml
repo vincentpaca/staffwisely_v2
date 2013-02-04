@@ -6,6 +6,10 @@ en:
       logout: Logout
       projects: Find Projects
 
+  dashboard:
+    buttons:
+      post: Post a Job
+
   footer:
     copyright_html: Staffwisely &copy; 2012
     how_it_works: How it Works
@@ -70,7 +74,6 @@ en:
         hourly_rate: Project-based (Hourly)
         monthly_rate: Time and Material (Monthly)
         details: Additional details
-
 
   home:
     header: Hire Skilled People Fast And When You Need Them
