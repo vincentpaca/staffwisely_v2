@@ -4,7 +4,7 @@ en:
       how: How it works
       login: Login
       logout: Logout
-      projects: Browse Projects
+      projects: Find Projects
 
   footer:
     copyright_html: Staffwisely &copy; 2012
@@ -74,7 +74,7 @@ en:
 
   home:
     header: Hire Skilled People Fast And When You Need Them
-    sub: Get access to iOS developers, Android, Ruby on Rails, Java and more. Post a job, receive proposals, and get them on your team in a matter of days. 
+    sub: Get access to iOS developers, Android, Ruby on Rails, Java and more. Post a job, receive proposals, and get them on your team in a matter of days.
 
     buttons:
       post_a_job: "Post a job. It's free."
@@ -88,10 +88,10 @@ en:
           text: From designers to iOS developers, Staffwisely gives you access to a huge network of companies that can provide you with the talent you need -- available on a per-project or time-and-material basis.
         second:
           header: Increase Your Sales
-          text: Never say "No" to a project again just because you don't have the people. When an opportunity comes, you take it! Focus on closing that deal first, Staffwisely will make the hiring a lot easier and faster. 
+          text: Never say "No" to a project again just because you don't have the people. When an opportunity comes, you take it! Focus on closing that deal first, Staffwisely will make the hiring a lot easier and faster.
         third:
           header: Deliver Projects On Time
-          text: Missing a deadline because you were under-staff is a thing in the past. With Staffwisely, you can grow your team on-demand to meet deadlines. Post a job, negotiate the terms, finalize a deal, and get your guy in a matter of days. 
+          text: Missing a deadline because you were under-staff is a thing in the past. With Staffwisely, you can grow your team on-demand to meet deadlines. Post a job, negotiate the terms, finalize a deal, and get your guy in a matter of days.
 
     how_it_works:
       header: How Does It Work?
