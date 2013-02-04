@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'ckeditor'
 gem 'truncate_html'
+gem 'ar_strip_commas'
 
 gem 'devise'
 gem 'ambry'

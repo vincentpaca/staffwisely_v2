@@ -7,6 +7,8 @@ class Proposal < ActiveRecord::Base
 
   validates_presence_of :user, :company, :post_id, :details, :monthly_rate, :hourly_rate
 
+  strip_commas_from :monthly_rate, :hourly_rate
+
   after_create :notify_parties
 
   private
