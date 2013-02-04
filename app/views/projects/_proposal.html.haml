@@ -5,7 +5,7 @@
     .profile-info
       .user-contractor.clearfix
         .user-thumb
-          = image_tag "user-1.png"
+          = image_tag "avatar-blank.png"
         .user-details
           %ul
             %li.contractor-name= current_user.company.name
@@ -23,7 +23,7 @@
               .grid_1.alpha
                 %fieldset
                   = f.text_field :monthly_rate
-              .grid_2.omega{ :style => "width:80px;" }
+              .grid_2.omega{ :style => "width:120px;" }
                 = f.select :monthly_currency, options_for_select(currencies.collect { |c| [c.name, c.id] })
 
           .section-group
@@ -32,7 +32,7 @@
               .grid_1.alpha
                 %fieldset
                   = f.text_field :hourly_rate
-              .grid_2.omega{ :style => "width:80px;" }
+              .grid_2.omega{ :style => "width:120px;" }
                 = f.select :hourly_currency, options_for_select(currencies.collect { |c| [c.name, c.id] })
 
           .section-group
