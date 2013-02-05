@@ -16,5 +16,9 @@ StaffwiselyV2::Application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => "registrations" }
   match 'dashboard' => 'dashboard#index', :as => 'user_root'
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+
   root :to => 'home#index'
 end
