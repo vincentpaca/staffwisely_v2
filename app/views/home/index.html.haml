@@ -7,6 +7,9 @@
 
       .main-signup-section
         = link_to t('home.buttons.post_a_job'), new_job_path, :class => "btn signup-cta"
+        %p
+          =t 'home.buttons.post_a_job_sub'
+          = link_to t("header.links.projects")
 
   .container_12
     = render 'why_hire'
