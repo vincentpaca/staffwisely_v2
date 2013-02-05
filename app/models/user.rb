@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :async
+         :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :company, :company_attributes
@@ -20,6 +20,6 @@ class User < ActiveRecord::Base
   private
 
   def send_welcome_message
-    UserMailer.delay_for(5.minutes).welcome(self.email)
+    UserMailer.welcome(self.email).deliver
   end
 end

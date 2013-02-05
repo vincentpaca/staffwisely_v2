@@ -16,11 +16,6 @@ gem 'ambry'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 
-gem 'sidekiq'
-gem 'devise-async'
-gem 'slim'
-gem 'sinatra', '>= 1.3.0', :require => nil
-
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', :platforms => :ruby
