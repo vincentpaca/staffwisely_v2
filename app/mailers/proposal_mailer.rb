@@ -1,5 +1,5 @@
 class ProposalMailer < ActionMailer::Base
-  default from: "\"Staffwisely\" <hello@staffwisely.com>"
+  default from: '"Staffwisely" <hello@staffwisely.com>'
 
   def notify_sender(sender, receiver, post, user, proposal, user_receiver)
     @sender, @receiver, @post, @proposal, @user_receiver = sender, receiver, post, proposal, user_receiver
