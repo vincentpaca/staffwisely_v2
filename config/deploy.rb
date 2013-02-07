@@ -3,6 +3,7 @@ set :repository,  "git@github.com:vincentpaca/staffwisely_v2.git"
 set :branch, "origin/mcloud"
 set :migrate_target, :current
 set :ssh_options, { :forward_agent => true }
+set :default_run_options, { :pty => true }
 set :rails_env, "production"
 set :deploy_to, "/home/deploy/apps/staffwisely_v2"
 set :normalize_asset_timestamps, false
@@ -31,7 +32,7 @@ default_environment["RAILS_ENV"] = 'production'
 #default_environment["GEM_PATH"]     = "/home/ubuntu/.rvm/gems/ruby-1.9.3-p374:/home/ubuntu/.rvm/gems/ruby-1.9.3-p374@global"
 #default_environment["RUBY_VERSION"] = "ruby-1.9.2-p374"
 
-default_run_options[:shell] = 'bash'
+#default_run_options[:shell] = 'bash'
 
 namespace :deploy do
   desc "Deploy your application"
