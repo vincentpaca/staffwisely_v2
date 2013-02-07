@@ -7,6 +7,7 @@ set :default_run_options, { :pty => true }
 set :rails_env, "production"
 set :deploy_to, "/home/deploy/apps/staffwisely_v2"
 set :normalize_asset_timestamps, false
+set :unicorn_pid, "/home/deploy/apps/staffwisely_v2/shared/tmp/pids/unicorn.staffwisely_v2.pid"
 
 set :user, "deploy"
 set :group, "staff"
@@ -99,7 +100,7 @@ namespace :deploy do
 
   desc "Zero-downtime restart of Unicorn"
   task :restart, :except => { :no_release => true } do
-    run "kill -s USR2 `cat /tmp/unicorn.staffwisely_v2.pid`"
+    run "kill -s USR2 `cat /home/deploy/apps/staffwisely_v2/shared/tmp/unicorn.staffwisely_v2.pid`"
   end
 
   desc "Start unicorn"
@@ -109,7 +110,7 @@ namespace :deploy do
 
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
-    run "kill -s QUIT `cat /tmp/unicorn.staffwisely_v2.pid`"
+    run "kill -s QUIT `cat /home/deploy/apps/staffwisely_v2/shared/tmp/unicorn.staffwisely_v2.pid`"
   end  
 
   namespace :rollback do

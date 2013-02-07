@@ -2,13 +2,13 @@ env = ENV["RAILS_ENV"] || "production"
 
 worker_processes 4
 
-listen "/tmp/staffwisely_v2.socket", :backlog => 64
+listen "/home/deploy/apps/staffwisely_v2/shared/tmp/staffwisely_v2.socket", :backlog => 64
 
 preload_app true
 
 timeout 30
 
-pid "/tmp/unicorn.staffwisely_v2.pid"
+pid "/home/deploy/apps/staffwisely_v2/shared/tmp/pids/unicorn.staffwisely_v2.pid"
 
 if env == "production"
   working_directory "/home/deploy/apps/staffwisely_v2/current"
