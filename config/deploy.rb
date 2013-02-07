@@ -1,4 +1,4 @@
-set :application, "staffwisely"
+set :application, "staffwisely_v2"
 set :repository,  "git@github.com:vincentpaca/staffwisely_v2.git"
 set :branch, "origin/mcloud"
 set :migrate_target, :current
@@ -99,7 +99,7 @@ namespace :deploy do
 
   desc "Zero-downtime restart of Unicorn"
   task :restart, :except => { :no_release => true } do
-    run "kill -s USR2 `cat /tmp/pids/unicorn.staffwisely.pid`"
+    run "kill -s USR2 `cat /tmp/unicorn.staffwisely_v2.pid`"
   end
 
   desc "Start unicorn"
@@ -109,7 +109,7 @@ namespace :deploy do
 
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
-    run "kill -s QUIT `cat /tmp/pids/unicorn.staffwisely.pid`"
+    run "kill -s QUIT `cat /tmp/unicorn.staffwisely_v2.pid`"
   end  
 
   namespace :rollback do

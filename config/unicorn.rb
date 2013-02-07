@@ -2,13 +2,13 @@ env = ENV["RAILS_ENV"] || "production"
 
 worker_processes 4
 
-listen "/tmp/staffwisey.socket", :backlog => 64
+listen "/tmp/staffwisely_v2.socket", :backlog => 64
 
 preload_app true
 
 timeout 30
 
-pid "/tmp/pids/unicorn.staffwisely.pid"
+pid "/tmp/unicorn.staffwisely_v2.pid"
 
 if env == "production"
   working_directory "/home/deploy/apps/staffwisely_v2/current"
@@ -25,7 +25,7 @@ before_fork do |server, worker|
     ActiveRecord::Base.connection.disconnect!
   end
 
-  old_pid = "/tmp/pids/unicorn.staffwisely.pid.oldbin"
+  old_pid = "/tmp/unicorn.staffwisely_v2.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       Process.kill("QUIT", File.read(old_pid).to_i)
