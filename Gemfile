@@ -16,6 +16,8 @@ gem 'ambry'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre'
 
+gem 'intercom-rails'
+
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', :platforms => :ruby
