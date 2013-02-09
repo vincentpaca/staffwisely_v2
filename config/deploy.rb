@@ -9,8 +9,8 @@ set :deploy_to, "/home/deploy/apps/staffwisely_v2"
 set :normalize_asset_timestamps, false
 set :unicorn_pid, "/home/deploy/apps/staffwisely_v2/shared/tmp/pids/unicorn.staffwisely_v2.pid"
 
-set :user, "deploy"
-set :group, "staff"
+set :user, "ubuntu"
+set :group, "ubuntu"
 set :use_sudo, false
 
 role :web, "203.177.42.9"
