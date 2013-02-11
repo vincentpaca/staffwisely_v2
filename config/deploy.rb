@@ -42,7 +42,7 @@ set :repository, "git@github.com:vincentpaca/staffwisely_v2.git"
 set :branch, "mcloud"
  
 # Deploy via github
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 set :deploy_to, "/home/ubuntu/apps/#{application}"
  
 # We have all components of the app on the same server
