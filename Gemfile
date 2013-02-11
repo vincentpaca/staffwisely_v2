@@ -34,8 +34,10 @@ end
 
 group :development do
   gem 'letter_opener'
-  gem 'capistrano'
 end
+
+gem 'capistrano'
+gem 'rvm-capistrano'
 
 group :production do
   gem 'unicorn'
