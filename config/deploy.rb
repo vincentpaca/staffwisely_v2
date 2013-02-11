@@ -36,7 +36,7 @@ set :rvm_install_with_sudo, true
 set :scm, :git
  
 # Use github repository
-set :repository, "http://github.com:vincentpaca/staffwisely_v2.git"
+set :repository, "git@github.com:vincentpaca/staffwisely_v2.git"
  
 # master is our default git branch
 set :branch, "mcloud"
