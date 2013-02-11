@@ -27,7 +27,7 @@ set :use_sudo, false
 set :rvm_ruby_string, '1.9.3'
  
 # System-wide RVM installation
-#set :rvm_type, :system
+set :rvm_type, :user
  
 # We use sudo (root) for system-wide RVM installation
 set :rvm_install_with_sudo, true
