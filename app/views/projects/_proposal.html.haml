@@ -1,46 +1,48 @@
 = form_for @proposal do |f|
-  .pane-white.submit-proposal{ :style => "display: none" }
-    %h1=t 'proposals.new.header'
-
-    .profile-info
+  .post-item.submit-proposal{ :style => "display: none" }
+    %h2=t 'proposals.new.header'
+    .post-item-header
+      %a.delete-post
+        %i.icon-remove
+    
       .user-contractor.clearfix
-        .user-thumb
-          = image_tag "avatar-blank.png"
+        .company-logo-container
+          .company-logo.small              
+            = image_tag("avatar-blank.png")
         .user-details
-          %ul
+          %ul.block
             %li.contractor-name= current_user.company.name
-            - if current_user.company.address.present?
-              %li.contractor-location
-                %icon.icon-map-marker
-                = current_user.company.address
+            %li.contractor-location
+              %i.icon-map-marker
+              Cebu, Philippines
 
-    .profile-form
-      .clearfix.section-group
-        .grid_7.alpha
-          .section-group
-            %fieldset
-              = f.label t("proposals.new.labels.monthly_rate")
-              .grid_1.alpha{ :style => "width: 120px;" }
-                %fieldset
-                  = f.text_field :monthly_rate
-              .grid_2.omega{ :style => "width:80px;" }
-                = f.select :monthly_currency, options_for_select(currencies.collect { |c| [c.name, c.id] })
+    .form
+      %fieldset
+        .columns.four.alpha
+          = f.label t("proposals.new.labels.monthly_rate")
+          .input-container
+            = f.text_field :monthly_rate, :class => 'short inline'
+            %select.short.inline
+              %option USD
+              %option SGD
+              %option PHP
+            
+            
+        .columns.four
+          
+          = f.label t("proposals.new.labels.hourly_rate")
+          .input-container
+            = f.text_field :hourly_rate, :class => 'short inline'
+            %select.short.inline
+              %option USD
+              %option SGD
+              %option PHP
+          
+      %fieldset 
+        = f.label t("proposals.new.labels.details")
+        = f.cktext_area :details, :class => "input-details"
 
-          .section-group
-            %fieldset
-              = f.label t("proposals.new.labels.hourly_rate")
-              .grid_1.alpha{ :style => "width: 120px;" }
-                %fieldset
-                  = f.text_field :hourly_rate
-              .grid_2.omega{ :style => "width:80px;" }
-                = f.select :hourly_currency, options_for_select(currencies.collect { |c| [c.name, c.id] })
-
-          .section-group
-            %fieldset
-              = f.label t("proposals.new.labels.details")
-              = f.cktext_area :details, :class => "input-details"
-
-          = f.hidden_field :post_id, :value => @project.id
+        = f.hidden_field :post_id, :value => @project.id
 
   #submit-proposal.hide
     = f.submit t("jobs.show.buttons.submit_proposal"), :class => "btn signup-cta full"

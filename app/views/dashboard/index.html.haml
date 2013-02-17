@@ -1,14 +1,29 @@
-%section.page
-  %section.wrapper.container_12.clearfix
-    = render 'company_info'
+.cover-overlay
+  .container
+    .page
+      .columns.five.alpha
+        = render 'company_info'
 
-    .grid_8.omega
-      .pane-transparent{ :style => 'padding: 0' }
+      .columns.eleven.omega
+        .pane-container
+          .pane-nav
+            %a.active
+              Projects
+              .marker
+            %a
+              Proposals
+            %a
+              Connections
+          .pane-inner
+            - @jobs.each do |job|
+              .post
 
-        - @jobs.each do |job|
-          .message-excerpt
-            = link_to job_path(job) do
-              .message-sum
-                .post-date= job.created_at.strftime("%b %d, %Y")
-                %strong= job.title
-                = truncate_html strip_tags(job.description), :length => 90
+                = link_to job_path(job) do
+                  .notifier
+                    5
+                  %h3= job.title
+                  = truncate_html strip_tags(job.description), :length => 90
+                  .post-date= job.created_at.strftime("%b %d, %Y")
+
+        
+                  

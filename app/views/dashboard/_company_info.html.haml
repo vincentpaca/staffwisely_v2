@@ -1,18 +1,17 @@
-.grid_4.alpha
-  .pane-white.clearfix
-    .user-contractor
-      .clearfix
-        .user-thumb
-          = image_tag("avatar-blank.png")
-        .user-details.clearfix
-          %ul
-            %li.contractor-name= current_user.company.name
-            - if current_user.company.address.present?
-              %li.contractor-location
-                %i.icon-map-marker
-                = current_user.company.address
-      .contractor-desc= current_user.company.description
+  
+.company-logo-container
+  .company-logo.large
+    = image_tag("avatar-blank.png")
+.user-details.clearfix
+  %ul.block
+    %li
+      = link_to 'Edit profile', '/users/edit'
+    %li.contractor-name= current_user.company.name
+    %li.contractor-location
+      %i.icon-map-marker
+      Cebu, Philippines
+.contractor-desc= current_user.company.description
 
-  - if request.fullpath == "/dashboard"
-    = link_to t("dashboard.buttons.post"), new_job_path, :class => "btn signup-cta full"
+- if request.fullpath == "/dashboard"
+  = link_to t("dashboard.buttons.post"), new_job_path, :class => "btn action full"
 

@@ -1,27 +1,28 @@
 = render 'shared/devise_header'
-
-%section
-  .user-account-single.centered
-    %h1=t 'sign_in.header'
-    %p 
-      =t 'sign_in.account?'
-      &nbsp;
-      - if devise_mapping.registerable? && controller_name != 'registrations'
-        = link_to t("sign_in.buttons.sign_up"), new_registration_path(resource_name), :class => 'btn'
-    .page
-      .form-wrap.fancy-form-wrap
-        = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-          %fieldset
-            = f.label :email
-            = f.email_field :email
-          %fieldset
-            = f.label :password
-            = f.password_field :password
-          - if devise_mapping.rememberable?
-            %fieldset
-              = f.check_box :remember_me
-              = f.label :remember_me, :style => 'display: inline-block; font-family: "OpenSansRegular"; font-size: 13px; top: -2px; position: relative'
-          %fieldset
-            = f.submit t("sign_in.buttons.sign_in"), :class => "btn full signup-cta"
-          %fieldset
-            = render "devise/shared/links"
+.container
+  .columns.six.alpha
+    %section
+      .user-account-single
+        %h1=t 'sign_in.header'
+        
+        =t 'sign_in.account?'
+        &nbsp;
+        - if devise_mapping.registerable? && controller_name != 'registrations'
+          = link_to t("sign_in.buttons.sign_up"), new_registration_path(resource_name), :class => 'btn'
+        .block
+          .form-wrap.fancy-form-wrap
+            = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+              %fieldset
+                = f.label :email
+                = f.email_field :email
+              %fieldset
+                = f.label :password
+                = f.password_field :password
+              - if devise_mapping.rememberable?
+                %fieldset
+                  = f.check_box :remember_me
+                  = f.label :remember_me, :style => 'display: inline-block; font-family: "OpenSansRegular"; font-size: 13px; top: -2px; position: relative'
+              %fieldset
+                = f.submit t("sign_in.buttons.sign_in"), :class => "btn full signup-cta"
+              %fieldset
+                = render "devise/shared/links"

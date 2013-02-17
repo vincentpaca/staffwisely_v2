@@ -13,9 +13,14 @@
       = content_tag :div, msg, :id => "flash_#{name}", :class => "flash"
 
     %header.fixed
-      = render 'shared/header'
-
-    = yield
+      .container
+        
+        .header-inner
+          = render 'shared/header'
+    %section.page.clearfix
+      = yield
 
     %section.footer
-      = render 'shared/footer'
+      .container
+        .sixteen.columns
+          = render 'shared/footer'

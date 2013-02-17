@@ -1,26 +1,101 @@
-.page.feature-section.clearfix.centered{ :style => 'height: 300px' }
-  .section-centered.group
+.home-section
+  .section-centered
     %h2=t 'home.how_it_works.header'
-  .item-round.first
-    .tooltip.hide
-      =t 'home.how_it_works.steps.first.text'
-      .caret
-    %span=t 'home.how_it_works.steps.first.header'
+  
+  .switch-nav
+    %a#hiringLink.active Hiring Skilled People
+    %a#projectsLink.inactive Getting Projects
+  .sixteen.columns
+    .section-white
+      #hiring
+        .block
+          When you have an urgent requirement and don’t have 30 days to hire a full-time employee, post a job on Staffwisely and get proposals from other companies in a matter of days.
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              1
+          .columns.twelve.omega
+            .item-description
+              %h3=t 'home.how_it_works.steps.first.header'
+              =t 'home.how_it_works.steps.first.text'
 
-  .item-round.second{ :style => 'margin-left: -20px; margin-right: -10px' }
-    .tooltip.hide
-      =t 'home.how_it_works.steps.second.text'
-      .caret
-    %span=t 'home.how_it_works.steps.second.header'
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              2
+          .columns.twelve.omega
+            .item-description
+              %h3=t 'home.how_it_works.steps.second.header'
+              =t 'home.how_it_works.steps.second.text'              
 
-  .item-round.third{ :style => 'margin-left: -10px; margin-right: -20px' }
-    .tooltip.hide
-      =t 'home.how_it_works.steps.third.text'
-      .caret
-    %span=t 'home.how_it_works.steps.third.header'
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              3
+          .columns.twelve.omega
+            .item-description
+              %h3=t 'home.how_it_works.steps.third.header'
+              =t 'home.how_it_works.steps.third.text'
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              4
+          .columns.twelve.omega
+            .item-description
+              %h3=t 'home.how_it_works.steps.fourth.header'
+              =t 'home.how_it_works.steps.fourth.text'              
+      
+      #projects{ :style => 'display: none' }
+        .block
+          Staffwisely would make a great revenue channel for your company. You can find projects from the job postings of other companies.
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              1
+          .columns.twelve.omega
+            .item-description
+              %h3 Search
+              Companies who have urgent hiring turns to Staffwisely to get those seats filled up ASAP. Search for job postings that match the skills and expertise of your people. This helps you fully maximize your people and keeps your bench rate low.
 
-  .item-round.fourth
-    .tooltip.hide
-      =t 'home.how_it_works.steps.fourth.text'
-      .caret
-    %span=t 'home.how_it_works.steps.fourth.header'
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              2
+          .columns.twelve.omega
+            .item-description
+              %h3 Submit a Proposal
+              If you have people that match the requirement of a project, be sure to submit a proposal. There are two types of proposal, per project (hourly billing) and time and material (monthly billing). Specify the rate you are willing to go
+
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              3
+          .columns.twelve.omega
+            .item-description
+              %h3 Negotiate
+              Just like most clients, the recipient of your proposal would most likely negotiate as they also want to keep a profit margin. Another thing to take note, you are not the only player trying to get the project, so play your cards right and put your negotiator hat on.
+
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              4
+          .columns.twelve.omega
+            .item-description
+              %h3 Sign Agreements
+              This is not required, but we highly recommend that you sign agreements like non-compete, non-solicitation, and non-disclosure to protect the interests of both parties. Staffwisely will not be providing these documents. Procurement of these contracts will be arranged by both parties.
+
+        .block.clearfix
+          .columns.two.alpha
+            .item-round
+              4
+          .columns.twelve.omega
+            .item-description
+              %h3 Monitor Performance
+              As a vendor, your work doesn’t stop after you close the deal. Make sure that you monitor the performance of your people deployed to your client. Treat the projects you got from Staffwisely the same way you treat your other clients.
+
+      .block.centered
+        Get skilled people fast. 
+        = link_to t('Create an account'), new_job_path
+
+
+      

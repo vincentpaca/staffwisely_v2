@@ -1,16 +1,18 @@
-%section.page
-  %section.main-hero
-    .container_12
+%section.main-hero
+  .container
+    .sixteen.columns
       .hero-message
         %h1=t 'home.header'
-        %p=t 'home.sub'
+        %h2=t 'home.sub'
 
       .main-signup-section
         = link_to t('home.buttons.post_a_job'), new_job_path, :class => "btn signup-cta"
-        %p
-          =t 'home.buttons.post_a_job_sub'
-          = link_to t("header.links.projects")
+        / %p
+        /   =t 'home.buttons.post_a_job_sub'
+        /   = link_to t("header.links.projects")
 
-  .container_12
-    = render 'why_hire'
-    = render 'how_it_works'
+.container
+  = render 'why_hire'
+  = render 'how_it_works'
+
+    
