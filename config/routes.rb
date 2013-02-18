@@ -13,6 +13,7 @@ StaffwiselyV2::Application.routes.draw do
   resources :proposals
 
   get :how_it_works, :controller => :home, :action => :how_it_works
+  get :contact_us, :controller => :home, :action => :contact_us
 
   devise_for :users, :controllers => { :registrations => "registrations" }
   match 'dashboard' => 'dashboard#index', :as => 'user_root'
