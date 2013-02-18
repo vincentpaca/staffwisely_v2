@@ -1,15 +1,15 @@
-%section.container_12
-  .head-wrap.fixed.clearfix
-    - if current_user
-      = link_to "", "/dashboard", :class => "logo"
-    - else
-      = link_to "", root_url, :class => "logo"
-    .head-wrap-inner
-      %ul.inline-list.right
-        - if current_user
-          %li= link_to t('header.links.projects'), projects_path
-          %li= link_to t('header.links.logout'), destroy_user_session_path, :method => :delete, :class => "btn cta"
-        - else
-          %li= link_to t('header.links.how'), "/how_it_works"
-          %li= link_to t('header.links.projects'), projects_path
-          %li= link_to t('header.links.login'), "/users/sign_in", :class => "btn cta"
+- if current_user
+  = link_to "", "/dashboard", :class => "logo"
+- else
+  = link_to "", root_url, :class => "logo"
+%ul.nav-list.right
+  - if current_user
+    %li= link_to t('header.links.projects'), projects_path
+    %li= link_to t('header.links.logout'), destroy_user_session_path, :method => :delete, :class => "btn cta"
+  - else
+    / %li= link_to t('header.links.how'), "/how_it_works"
+    %li= link_to t('header.links.projects'), projects_path
+    %li
+      = link_to t('header.links.signup'), "/users/sign_up", :class => "btn signup"
+      = link_to t('header.links.login'), "/users/sign_in", :class => "btn cta"
+        

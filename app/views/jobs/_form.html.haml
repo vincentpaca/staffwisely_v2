@@ -1,44 +1,37 @@
-%section.page
-  %section.wrapper.container_12.clearfix
-    .grid_8.alpha
-      %h1=t 'jobs.new.header'
-      .pane-white.clearfix
-        .pane-transparent
-          .profile-form
+.post-item
+  %h1=t 'jobs.new.header'
+  
+  .form.add-post-form
 
-            = form_for @job, :url => jobs_path do |f|
+    = form_for @job, :url => jobs_path do |f|
 
-              .clearfix.section-group
-                .grid_7.alpha
-                  %fieldset
-                    = f.label t("jobs.new.labels.title")
-                    = f.text_field :title
+      
+      %fieldset
+        = f.label t("jobs.new.labels.title")
+        = f.text_field :title
 
-              .clearfix.section-group
-                .grid_3.alpha
-                  %fieldset
-                    = f.label t("jobs.new.labels.arrangement")
-                    = f.select :working_arrangement, options_for_select(work_arrangements.collect { |w| [w.name, w.id] })
-                .grid_3.omega
-                  %fieldset
-                    = f.label t("jobs.new.labels.experience")
-                    = f.select :experience, options_for_select(experiences.collect { |e| [e.name, e.id] })
-              .clearfix.section-group
-                .grid_7.alpha
-                  %fieldset
-                    = f.label t("jobs.new.labels.description")
-                    = f.cktext_area :description, :style => "height: 120px"
+      
+      %fieldset
+        .columns.four.alpha
+          = f.label t("jobs.new.labels.arrangement")
+          = f.select :working_arrangement, options_for_select(work_arrangements.collect { |w| [w.name, w.id] })
+        .columns.four
+          = f.label t("jobs.new.labels.experience")
+          = f.select :experience, options_for_select(experiences.collect { |e| [e.name, e.id] })
+        
+      
+      %fieldset.block
+        = f.label t("jobs.new.labels.description")
+        = f.cktext_area :description, :style => "height: 120px"
 
-              .clearfix.section-group
-                .grid_7.alpha
-                  %fieldset
-                    = f.label t("jobs.new.labels.requirements")
-                    = f.cktext_area :requirements, :style => "height: 120px"
+      
+      %fieldset.block
+        = f.label t("jobs.new.labels.requirements")
+        = f.cktext_area :requirements, :style => "height: 120px"
 
-              .clearfix.section-group
-                %p
-                  %strong=t 'jobs.new.important.header'
-                  =t 'jobs.new.important.text'
+      .job-note
+        %strong=t 'jobs.new.important.header'
+        =t 'jobs.new.important.text'
 
-              %div{ :style => "margin: 20px 0" }
-                =f.submit t("jobs.new.buttons.post"), :class => "btn signup-cta"
+      %div{ :style => "margin: 20px 0" }
+        =f.submit t("jobs.new.buttons.post"), :class => "btn signup-cta"

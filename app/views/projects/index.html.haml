@@ -1,24 +1,84 @@
-%section.page
-  .page{ :style => 'margin-top: 50px' }
-    .container_12
-      %h1
-        Projects
-      - @projects.each do |p|
-        .section-group.search-group.clearfix
-          .grid_4.alpha
-            .user-contractor
-              .clearfix
-                .user-thumb
-                  = image_tag("avatar-blank.png")
-                .user-details.clearfix
-                  %ul
-                    %li.contractor-name= p.company.name
-                    - if p.company.address.present?
-                      %li.contractor-location
-                        %i.icon-map-marker
-                        = p.company.address
-          .grid_8.omega
-            .search-item
-              %h3
-                =link_to p.title, project_path(p)
-              %p= truncate_html strip_tags(p.description), :length => 150
+.cover-overlay
+  .container
+    .page
+      .columns.five.alpha
+        = render 'search'
+      .columns.eleven.omega
+        .pane-container
+          .pane-nav
+            %a.active
+              Projects
+              .marker
+          .pane-inner.clearfix
+            .post
+              %a.clearfix
+                .company-logo-container
+                  .company-logo.small                  
+                    = image_tag("avatar-blank.png")
+                  ClickingLabs
+                .post-inner
+                  %h3
+                    Ruby on Rails developer
+                  
+                  .project-meta.list-block
+                    %ul
+                      %li
+                        =t 'jobs.show.labels.arrangement'
+                        %strong Remote with occasional meetup
+                      %li
+                        =t 'jobs.show.labels.experience'
+                        %strong Senior
+                      %li
+                        Contract length: 
+                        %strong 3 months  
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus ante quis leo tempus sit amet imperdiet augue sagittis. Nullam vel nunc turpis
+                  .post-date
+                    Feb 12, 2013
+
+            .post
+              %a.clearfix
+                .company-logo-container
+                  .company-logo.small                  
+                    = image_tag("avatar-blank.png")
+                  ClickingLabs
+                .post-inner
+                  %h3
+                    Ruby on Rails developer
+                  
+                  .project-meta.list-block
+                    %ul
+                      %li
+                        =t 'jobs.show.labels.arrangement'
+                        %strong Remote with occasional meetup
+                      %li
+                        =t 'jobs.show.labels.experience'
+                        %strong Senior
+                      %li
+                        Contract length: 
+                        %strong 3 months  
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus ante quis leo tempus sit amet imperdiet augue sagittis. Nullam vel nunc turpis
+                  .post-date
+                    Feb 12, 2013
+
+
+              /   %h3
+              /     =link_to p.title, project_path(p)
+              /   %p= truncate_html strip_tags(p.description), :length => 150
+              / .section-group.search-group.clearfix
+              /   .grid_4.alpha
+              /     .user-contractor
+              /       .clearfix
+              /         .user-thumb
+              /           = image_tag("avatar-blank.png")
+              /         .user-details
+              /           %ul
+              /             %li.contractor-name= p.company.name
+              /             - if p.company.address.present?
+              /               %li.contractor-location
+              /                 %i.icon-map-marker
+              /                 = p.company.address
+              /   .grid_8.omega
+              /     .search-item
+                  
+
+           

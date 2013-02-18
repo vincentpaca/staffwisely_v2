@@ -1,25 +1,23 @@
 $(document).ready(function(){
-	$(".item-round").hover(function(){
-		$(this).find('.tooltip').fadeToggle('fast');
-	});
+	
 	
 	$("#proposeBtn").click(function(e){
-		e.preventDefault();
+		e.preventDefault(); 
 		$(".submit-proposal").slideDown('fast');
 		$('html, body').animate({ scrollTop: $('.submit-proposal').offset().top }, 'fast');
 	});
-	$("#projectsLink").click(function(){
-		$("#projects").show();
-		$("#hire").hide();
-
+	$("#hiringLink").click(function(){
 		$(this).addClass('active');
-		$("#hireLink").removeClass('active');
-	});
-	$("#hireLink").click(function(){
+		$(this).removeClass('inactive');
+		$("#projectsLink").addClass('inactive');
+		$("#hiring").show();
 		$("#projects").hide();
-		$("#hire").show();
-
+	});
+	$("#projectsLink").click(function(){
 		$(this).addClass('active');
-		$("#projectsLink").removeClass('active');
+		$(this).removeClass('inactive');
+		$("#hiringLink").addClass('inactive');
+		$("#projects").show();
+		$("#hiring").hide();
 	});
 });

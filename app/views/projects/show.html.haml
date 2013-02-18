@@ -1,19 +1,28 @@
-%section.page
-  %section.wrapper.container_12.clearfix
-    = render 'company_info'
-
-    .grid_8.omega
-      .pane-white{ :style => 'padding: 0' }
+.cover-overlay
+  .container
+    .page
+      .columns.twelve.offset-by-two
         .post-item
+          .post-item-header
+            .company-logo-container
+              .company-logo.small              
+                = image_tag("avatar-blank.png")
+            .user-details
+              %ul.block
+                %li.contractor-name
+                  Clicking Labs
+                %li.contractor-location
+                  %i.icon-map-marker
+                  Cebu, Philippines
           %h1=t @project.title
           .project-meta
             %ul
               %li
-                %strong=t 'jobs.show.labels.arrangement'
-                = WorkingArrangement.find(@project.working_arrangement).name
+                =t 'jobs.show.labels.arrangement'
+                %strong= WorkingArrangement.find(@project.working_arrangement).name
               %li
-                %strong=t 'jobs.show.labels.experience'
-                = Experience.find(@project.experience).name
+                =t 'jobs.show.labels.experience'
+                %strong= Experience.find(@project.experience).name
           .project-desc
             %p= @project.description.html_safe
 
@@ -21,8 +30,11 @@
             %h2=t 'jobs.show.labels.requirements'
             %p= @project.requirements.html_safe
 
-      - if current_user
-        = render 'proposal'
-      - else
-        = link_to "Submit a Proposal", send_proposal_project_path(@project), :class => "btn signup-cta full"
+        - if current_user
+          = render 'proposal'
+        - else
+          = link_to "Submit a Proposal", send_proposal_project_path(@project), :class => "btn signup-cta full"
 
+
+
+      

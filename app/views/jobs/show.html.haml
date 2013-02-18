@@ -1,22 +1,47 @@
-%section.page
-  %section.wrapper.container_12.clearfix
-    = render 'dashboard/company_info'
-
-    .grid_8.omega
-      .pane-white{ :style => 'padding: 0' }
+.cover-overlay
+  .container
+    .page
+      .columns.twelve.offset-by-two
         .post-item
+          - if current_user
+            %a.back-link
+              %i.icon-angle-left
+              %span
+                Back
+          .post-item-header
+            - if current_user
+              %a.delete-post
+                %i.icon-remove
+            .company-logo-container
+              .company-logo.small              
+                = image_tag("avatar-blank.png")
+            .user-details
+              %ul.block
+                %li.contractor-name= current_user.company.name
+                
+                %li.contractor-location
+                  %i.icon-map-marker
+                  Cebu, Philippines
+          - if current_user
+            %a.edit-post
+              edit this post
           %h1=t @job.title
           .project-meta
             %ul
               %li
-                %strong=t 'jobs.show.labels.arrangement'
-                = WorkingArrangement.find(@job.working_arrangement).name
+                =t 'jobs.show.labels.arrangement'
+                %strong= WorkingArrangement.find(@job.working_arrangement).name
               %li
-                %strong=t 'jobs.show.labels.experience'
-                = Experience.find(@job.experience).name
+                =t 'jobs.show.labels.experience'
+                %strong= Experience.find(@job.experience).name
+              %li
+                Contract length: 
+                %strong 3 months
           .project-desc
             %p= @job.description.html_safe
 
           .job-requirements
             %h2=t 'jobs.show.labels.requirements'
             %p= @job.requirements.html_safe
+
+      
