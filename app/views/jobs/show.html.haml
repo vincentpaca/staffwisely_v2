@@ -1,47 +1,83 @@
 .cover-overlay
   .container
     .page
-      .columns.twelve.offset-by-two
-        .post-item
-          - if current_user
-            %a.back-link
-              %i.icon-angle-left
-              %span
-                Back
-          .post-item-header
-            - if current_user
-              %a.delete-post
-                %i.icon-remove
-            .company-logo-container
-              .company-logo.small              
-                = image_tag("avatar-blank.png")
-            .user-details
-              %ul.block
-                %li.contractor-name= current_user.company.name
-                
-                %li.contractor-location
-                  %i.icon-map-marker
-                  Cebu, Philippines
-          - if current_user
-            %a.edit-post
-              edit this post
-          %h1=t @job.title
-          .project-meta
-            %ul
-              %li
-                =t 'jobs.show.labels.arrangement'
-                %strong= WorkingArrangement.find(@job.working_arrangement).name
-              %li
-                =t 'jobs.show.labels.experience'
-                %strong= Experience.find(@job.experience).name
-              %li
-                Contract length: 
-                %strong 3 months
-          .project-desc
-            %p= @job.description.html_safe
+      .columns.five.alpha
+        = render 'company_info'
+      .columns.eleven.omega
 
-          .job-requirements
-            %h2=t 'jobs.show.labels.requirements'
-            %p= @job.requirements.html_safe
+      .columns.eleven.omega
+        .pane-container
+          .pane-nav
+            %a
+              Projects
+              
+            %a.active
+              Proposals
+              .marker
+            %a
+              Connections
+          .pane-inner
+            .post-container
+              .post-single           
+                %h1= @job.title
+                .project-meta
+                  %ul
+                    %li
+                      =t 'jobs.show.labels.arrangement'
+                      %strong= WorkingArrangement.find(@job.working_arrangement).name
+                    %li
+                      =t 'jobs.show.labels.experience'
+                      %strong= Experience.find(@job.experience).name
+                .project-desc
+                  = @job.description.html_safe
+                  / .post-date= @job.created_at.strftime("%b %d, %Y")
+              .proposals
+                
+                .post-list
+                  .clearfix
+                    .details-right
+                      .project-meta
+                        %ul
+                          %li
+                            monthly 
+                            %strong $6,500
+                          %li
+                            hourly
+                            %strong $24/hr
+                      
+                    .company-logo-container
+                      .company-logo.small
+                        =image_tag 'avatar-blank.png'
+                      
+                    .user-details
+                      %ul
+                        %li.contractor-name
+                          ClickingLabs
+                        %li.contractor-location
+                          %i.icon-map-marker
+                          Cebu, Philippines    
+                    .message.group
+                      From designers to iOS developers, Staffwisely gives you access to a huge network of companies that can provide you with the talent you need -- available on a per-project or time-and-material basis.
+                    .attachments
+                      %strong
+                        2 attachments - 
+                      %a 
+                        Download all
+                      %ul
+                        %li
+                          %strong
+                            proposal2012.doc
+                          (203k)
+                          %a
+                            Download
+                        %li
+                          %strong
+                            systemdocumentation2012.doc
+                          (56k)
+                          %a
+                            Download
+
+
+
 
       
