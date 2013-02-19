@@ -64,6 +64,9 @@ en:
       buttons:
         submit_proposal: Submit a proposal
 
+  projects:
+    header: Projects
+
   proposals:
     new:
       header: Submit a proposal
