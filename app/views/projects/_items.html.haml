@@ -1,0 +1,23 @@
+- @projects.each do |p|
+  .post
+    = link_to project_path(p), :class => "clearfix" do
+      .company-logo-container
+        .company-logo.small
+          = image_tag("avatar-blank.png")
+        = p.company.name
+      .post-inner
+        %h3= p.title
+        .project-meta.list-block
+          %ul
+            %li
+              =t 'jobs.show.labels.arrangement'
+              %strong= p.working_arrangement_name
+            %li
+              =t 'ajobs.show.labels.experience'
+              %strong= p.experience_name
+            %li
+              Contract length:
+              %strong 3 months
+        = truncate_html strip_tags(p.description), :length => 150
+        .post-date
+          = p.created_at.strftime("%B %-d")

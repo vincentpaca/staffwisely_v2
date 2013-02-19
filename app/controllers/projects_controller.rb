@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_filter :authenticate_user!, :only => [ :send_proposal ]
+
   def index
     if current_user
       @projects = Post.includes(:user, :company).all_except(current_user.company.id)
